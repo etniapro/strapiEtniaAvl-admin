@@ -1,0 +1,55 @@
+{
+  "kind": "collectionType",
+  "collectionName": "home_products",
+  "info": {
+    "singularName": "home-product",
+    "pluralName": "home-products",
+    "displayName": "homeProduct",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "brand": {
+      "type": "string",
+      "required": true
+    },
+    "tags": {
+      "type": "string"
+    },
+    "category": {
+      "type": "string"
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "description": {
+      "type": "text"
+    },
+    "description2": {
+      "type": "text"
+    },
+    "features": {
+      "type": "component",
+      "repeatable": true,
+      "component": "objet-feature.features"
+    },
+    "specifications": {
+      "type": "component",
+      "repeatable": true,
+      "component": "objet-specification.specifications"
+    }
+  }
+}
